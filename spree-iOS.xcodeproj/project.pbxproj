@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6658923E91F1BF3135BB208B /* libPods-spree-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 33F1DB451C41099A043A500C /* libPods-spree-iOS.a */; };
 		CBF609251C901D5600875310 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CBF609241C901D5600875310 /* main.m */; };
 		CBF609281C901D5600875310 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CBF609271C901D5600875310 /* AppDelegate.m */; };
 		CBF6092A1C901D5600875310 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBF609291C901D5600875310 /* Assets.xcassets */; };
@@ -14,6 +15,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		33F1DB451C41099A043A500C /* libPods-spree-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-spree-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB2395A83738C00BD0910840 /* Pods-spree-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-spree-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-spree-iOS/Pods-spree-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		CBF609201C901D5600875310 /* spree-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "spree-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBF609241C901D5600875310 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CBF609261C901D5600875310 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -21,6 +24,7 @@
 		CBF609291C901D5600875310 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CBF6092C1C901D5600875310 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CBF6092E1C901D5600875310 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF2ABA3BBBE8F9A9388197B7 /* Pods-spree-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-spree-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-spree-iOS/Pods-spree-iOS.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -28,17 +32,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6658923E91F1BF3135BB208B /* libPods-spree-iOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		05855FA4CD92EC858F6FB8A5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				33F1DB451C41099A043A500C /* libPods-spree-iOS.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CBF609171C901D5600875310 = {
 			isa = PBXGroup;
 			children = (
 				CBF609221C901D5600875310 /* spree-iOS */,
 				CBF609211C901D5600875310 /* Products */,
+				DE9839328861FF7473B1DE8A /* Pods */,
+				05855FA4CD92EC858F6FB8A5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,6 +86,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		DE9839328861FF7473B1DE8A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BB2395A83738C00BD0910840 /* Pods-spree-iOS.debug.xcconfig */,
+				EF2ABA3BBBE8F9A9388197B7 /* Pods-spree-iOS.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -78,9 +102,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CBF609311C901D5600875310 /* Build configuration list for PBXNativeTarget "spree-iOS" */;
 			buildPhases = (
+				8B7B13116276DE04DE9544CF /* Check Pods Manifest.lock */,
 				CBF6091C1C901D5600875310 /* Sources */,
 				CBF6091D1C901D5600875310 /* Frameworks */,
 				CBF6091E1C901D5600875310 /* Resources */,
+				6CE7B014F6C3DAC29A691154 /* Embed Pods Frameworks */,
+				9500144163EE575724FA361D /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -135,6 +162,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6CE7B014F6C3DAC29A691154 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-spree-iOS/Pods-spree-iOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8B7B13116276DE04DE9544CF /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9500144163EE575724FA361D /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-spree-iOS/Pods-spree-iOS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CBF6091C1C901D5600875310 /* Sources */ = {
@@ -196,7 +271,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -233,7 +308,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -242,6 +317,7 @@
 		};
 		CBF609321C901D5600875310 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BB2395A83738C00BD0910840 /* Pods-spree-iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "spree-iOS/Info.plist";
@@ -253,6 +329,7 @@
 		};
 		CBF609331C901D5600875310 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EF2ABA3BBBE8F9A9388197B7 /* Pods-spree-iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "spree-iOS/Info.plist";
@@ -281,6 +358,7 @@
 				CBF609331C901D5600875310 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
